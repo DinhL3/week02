@@ -108,7 +108,7 @@
 // var res = Math.floor(Math.random() * 10)
 // console.log(res)
 
-// 9. Magic ball
+
 
 function checkPrime(number) {
     for (let step = 2; step < number); step++) { if (number % step == 0) { return false } }
