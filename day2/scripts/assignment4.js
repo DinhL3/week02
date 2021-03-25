@@ -22,3 +22,56 @@ document.getElementById("change-click").addEventListener("click", function () {
     clickCount++;
     document.getElementById("change-click").innerHTML = clickCount;
 });
+
+let hoverCount = 0;
+
+document.getElementById("change-hover").addEventListener("mouseover", function () {
+    hoverCount++;
+    document.getElementById("change-hover").innerHTML = hoverCount;
+});
+
+let lovesMe = 0;
+
+document.getElementById("change-he-loves-me").addEventListener("click", function () {
+    lovesMe++;
+    if (lovesMe % 2) {
+        document.getElementById("change-he-loves-me").innerHTML = "He Loves Me";
+    } else {
+        document.getElementById("change-he-loves-me").innerHTML = "He Loves Me Not";
+    }
+});
+
+document.getElementById("change-to-current-date").addEventListener(
+    "click", function () {
+        const d = new Date();
+        document.getElementById("change-to-current-date").innerHTML = d;
+    }
+);
+
+function reportSize() {
+    // window = viewport
+    const width = window.innerWidth;
+    document.getElementById("change-to-current-width").innerHTML =
+        "Width: " + width;
+    const height = window.innerHeight;
+    document.getElementById("change-to-current-height").innerHTML =
+        "Height: " + height;
+}
+// onresize is an event
+window.onresize = reportSize;
+
+let listLength = 0;
+
+document.getElementById("add-list-item").addEventListener("click",
+    function () {
+        listLength++
+        // To create a li, you must create both a li node and a text node
+        //Check this for full combo: https://www.w3schools.com/jsref/met_node_appendchild.asp
+        let linode = document.createElement("li")
+        let textnode = document.createTextNode("This is a new li element number " + listLength)
+        linode.appendChild(textnode)
+
+        let elementTarget = document.getElementById("add-list-item")
+        elementTarget.appendChild linode)
+    }
+);
