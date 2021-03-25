@@ -68,10 +68,10 @@ document.getElementById("add-list-item").addEventListener("click",
         // To create a li, you must create both a li node and a text node
         //Check this for full combo: https://www.w3schools.com/jsref/met_node_appendchild.asp
         let linode = document.createElement("li")
-        let textnode = document.createTextNode("This is a new li element number " + listLength)
-        linode.appendChild(textnode)
+        let textnode = document.createTextNode("This is a new li element number " + listLength);
+        linode.appendChild(textnode);
 
-        let elementTarget = document.getElementById("add-list-item")
-        elementTarget.appendChild linode)
+        let elementTarget = document.getElementById("add-list-item");
+        elementTarget.appendChild(linode)
     }
 );
